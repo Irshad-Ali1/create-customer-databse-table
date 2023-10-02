@@ -1,0 +1,126 @@
+CREATE DATABASE BUSINESS;
+USE BUSINESS;
+CREATE TABLE CUSTOMERS(NAME VARCHAR(20), EMAILID VARCHAR(20), CUSTOMERID INT, PHONE_NUMBER INT, GENDER CHAR, CUSTOMER_TYPE VARCHAR(20));
+SELECT * FROM CUSTOMERS;
+INSERT INTO CUSTOMERS (NAME, EMAILID, CUSTOMERID, PHONE_NUMBER, GENDER, CUSTOMER_TYPE)
+VALUES
+  ('John Doe', 'john.doe@example.com', 'CUST001', '4567890', 'M', 'Individual'),
+  ('Jane Smith', 'jane.smith@example.com', 'CUST002', '5678901', 'F', 'Individual'),
+  ('ABC Company', 'abc@example.com', 'CUST003', '6789012', 'N/A', 'Business'),
+  ('XYZ Corporation', 'xyz@example.com', 'CUST004', '7890123', 'N/A', 'Business'),
+  ('Sam Johnson', 'sam.johnson@example.com', 'CUST005', '8901234', 'M', 'Individual'),
+  ('Emily Wilson', 'emily@example.com', 'CUST006', '9012345', 'F', 'Individual'),
+  ('LMN Enterprises', 'lmn@example.com', 'CUST007', '0123456', 'N/A', 'Business'),
+  ('Tech Solutions Inc.', 'tech@example.com', 'CUST008', '1234567', 'N/A', 'Business'),
+  ('Michael Brown', 'michael@example.com', 'CUST009', '2345678', 'M', 'Individual'),
+  ('Sarah Davis', 'sarah@example.com', 'CUST010', '456789', 'F', 'Individual'),
+  ('PQR Co.', 'pqr@example.com', 'CUST011', '2345678', 'N/A', 'Business'),
+  ('ABC Inc.', 'abc@example.com', 'CUST012', '3456789', 'N/A', 'Business'),
+  ('Mark Johnson', 'mark@example.com', 'CUST013', '4567890', 'M', 'Individual'),
+  ('Lisa Smith', 'lisa@example.com', 'CUST014', '5678901', 'F', 'Individual'),
+  ('EFG Corporation', 'efg@example.com', 'CUST015', '6789012', 'N/A', 'Business'),
+  ('Tech Experts', 'techexp@example.com', 'CUST016', '7890123', 'N/A', 'Business'),
+  ('Robert Wilson', 'robert@example.com', 'CUST017', '8901234', 'M', 'Individual'),
+  ('Mary Johnson', 'mary@example.com', 'CUST018', '9012345', 'F', 'Individual'),
+  ('GHI Co.', 'ghi@example.com', 'CUST019', '0123456', 'N/A', 'Business'),
+  ('XYZ Ltd.', 'xyz@example.com', 'CUST020', '1232345', 'N/A', 'Business'),
+  ('William Davis', 'william@example.com', 'CUST021', '2343456', 'M', 'Individual'),
+  ('Jennifer Smith', 'jennifer@example.com', 'CUST022', '3454567', 'F', 'Individual'),
+  ('JKL Enterprises', 'jkl@example.com', 'CUST023', '4565678', 'N/A', 'Business'),
+  ('ABC Solutions', 'abcsol@example.com', 'CUST024', '5676789', 'N/A', 'Business'),
+  ('David Miller', 'david@example.com', 'CUST025', '6787890', 'M', 'Individual'),
+  ('Susan White', 'susan@example.com', 'CUST026', '7898901', 'F', 'Individual'),
+  ('MNO Co.', 'mno@example.com', 'CUST027', '8909012', 'N/A', 'Business'),
+  ('Tech Innovators', 'techinnov@example.com', 'CUST028', '9010123', 'N/A', 'Business'),
+  ('James Smith', 'james@example.com', 'CUST029', '0121234', 'M', 'Individual'),
+  ('Emily Brown', 'emilybrown@example.com', 'CUST030', '1232345', 'F', 'Individual'),
+  ('RST Corporation', 'rst@example.com', 'CUST031',  '2343456', 'N/A', 'Business'),
+  ('XYZ Innovations', 'xyzinnov@example.com', 'CUST032', '3454567', 'N/A', 'Business'),
+  ('Daniel Johnson', 'daniel@example.com', 'CUST033', '4565678', 'M', 'Individual'),
+  ('Olivia Wilson', 'olivia@example.com', 'CUST034', '5676789', 'F', 'Individual'),
+  ('UVW Enterprises', 'uvw@example.com', 'CUST035', '6787890', 'N/A', 'Business'),
+  ('Tech Solutions Plus', 'techplus@example.com', 'CUST036', '7898901', 'N/A', 'Business'),
+  ('Matthew Davis', 'matthew@example.com', 'CUST037', '8909012', 'M', 'Individual'),
+  ('Sophia Smith', 'sophia@example.com', 'CUST038', '9010123', 'F', 'Individual'),
+  ('LMN Ltd.', 'lmnltd@example.com', 'CUST039', '0121234', 'N/A', 'Business'),
+  ('ABC Innovations', 'abcinnov@example.com', 'CUST040', '0121234', 'N/A', 'Business'),
+  ('Michael Wilson', 'michaelwilson@example.com', 'CUST041', '2342345', 'M', 'Individual'),
+  ('Grace Davis', 'grace@example.com', 'CUST042', '3453456', 'F', 'Individual'),
+  ('PQR Innovations', 'pqrinnov@example.com', 'CUST043', '4564567', 'N/A', 'Business'),
+  ('XYZ Solutions', 'xyzsol@example.com', 'CUST044', '5675678', 'F', 'Business');
+
+
+
+-- Create the Products table
+CREATE TABLE Products (
+    ProductID INT PRIMARY KEY,
+    ProductName VARCHAR(255),
+    Description TEXT,
+    Price DECIMAL(10, 2),
+    StockQuantity INT
+);
+
+INSERT INTO Products (ProductID, ProductName, Description, Price, StockQuantity)
+VALUES
+  (1, 'Widget A', 'High-quality widget for various uses', 19.99, 100),
+  (2, 'Widget B', 'Widget with advanced features', 29.99, 75),
+  (3, 'Gizmo X', 'Multi-functional gizmo with cutting-edge technology', 49.99, 50),
+  (4, 'Gadget Y', 'Compact gadget with unique capabilities', 39.99, 60),
+  (5, 'Thingamajig Z', 'Versatile thingamajig for everyday tasks', 9.99, 200);
+
+CREATE TABLE INQUIRIES (
+    InquiryID INT PRIMARY KEY,
+    CustomerID INT,
+    InquiryDate DATE,
+    InquiryText TEXT
+);
+
+INSERT INTO INQUIRIES (InquiryID, CustomerID, InquiryDate, InquiryText)
+VALUES
+  (1, 1, '2023-09-25', 'How can I track my order?'),
+  (2, 2, '2023-09-26', 'I need assistance with a product return.'),
+  (3, 1, '2023-09-27', 'Do you offer discounts for bulk orders?'),
+  (4, 3, '2023-09-28', 'I have a billing question.'),
+  (5, 2, '2023-09-29', 'Can you help me choose the right product?');
+
+
+-- Create the Sales table
+CREATE TABLE SALES (
+    SaleID INT AUTO_INCREMENT PRIMARY KEY,
+    ProductName VARCHAR(255),
+    SaleDate DATE,
+    CustomerID VARCHAR(10),
+    Quantity INT,
+    UnitPrice DECIMAL(10, 2),
+    TotalAmount DECIMAL(10, 2)
+);
+
+INSERT INTO SALES (ProductName, SaleDate, CustomerID, Quantity, UnitPrice, TotalAmount)
+VALUES
+    ('Product A', '2023-09-01', 'CUST001', 5, 10.99, 54.95),
+    ('Product B', '2023-09-02', 'CUST002', 3, 24.95, 74.85),
+    ('Product A', '2023-09-03', 'CUST003', 2, 10.99, 21.98),
+    ('Product C', '2023-09-04', 'CUST004', 4, 14.50, 58.00),
+    ('Product B', '2023-09-05', 'CUST005', 1, 24.95, 24.95),
+    ('Product A', '2023-09-06', 'CUST001', 2, 10.99, 21.98),
+    ('Product D', '2023-09-07', 'CUST002', 6, 9.99, 59.94),
+    ('Product B', '2023-09-08', 'CUST003', 3, 24.95, 74.85),
+    ('Product C', '2023-09-09', 'CUST004', 5, 14.50, 72.50),
+    ('Product A', '2023-09-10', 'CUST005', 4, 10.99, 43.96);
+
+CREATE TABLE RENEWALS (
+    RenewalID INT PRIMARY KEY AUTO_INCREMENT,
+    CustomerID INT,
+    RenewalDate DATE,
+    RenewalAmount DECIMAL(10, 2),
+    PaymentStatus VARCHAR(20)
+);
+
+INSERT INTO RENEWALS (CustomerID, RenewalDate, RenewalAmount, PaymentStatus)
+VALUES
+    (1, '2023-01-15', 250.00, 'Paid'),
+    (2, '2023-02-20', 150.50, 'Paid'),
+    (3, '2023-03-25', 300.75, 'Pending'),
+    (4, '2023-04-10', 200.25, 'Paid'),
+    (5, '2023-05-05', 180.50, 'Pending');
+    
